@@ -1,4 +1,4 @@
-const Options = ({ updateFeedback, btnOptions, totalFeedBack, resetFeedBack }) => {
+const Options = ({ updateFeedback, btnOptions, totalFeedback, resetFeedback }) => {
     return (
         <div>
             {btnOptions.map(feedbackType => (
@@ -7,9 +7,10 @@ const Options = ({ updateFeedback, btnOptions, totalFeedBack, resetFeedBack }) =
                     {feedbackType}
                 </button>
             ))}
-            {totalFeedBack > 0 && (
-                <button button onClick={() => resetFeedBack()}>
-                    Reset </button>
+            {totalFeedback !== 0 && (
+                <button onClick={() => resetFeedback()}>
+                    Reset
+                </button>
             )}
         </div>
     );
